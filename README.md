@@ -45,3 +45,11 @@ rsconnect::deployApp(".")
 
 ## Auteur
 AWOUTO K. Samson - Élève Ingénieur Statisticien Économiste, ENSAE Dakar
+
+## 🛡️ Propriété Intellectuelle
+Ce projet est protégé par la licence **CC BY-NC-SA 4.0**.
+Toute utilisation commerciale est interdite sans autorisation explicite de l'auteur.
+
+## 📜 Citation
+> AWOUTO, K. S. (2026). *Application Shiny - Subdivisions Burkina Faso 2025*. ENSAE Dakar. https://github.com/Awoutokoffisamson/burkina_application_shiny
+
