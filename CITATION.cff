@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "Si vous utilisez cette application, veuillez la citer comme suit."
 authors:
 - family-names: "AWOUTO"
-  given-names: "K. Samson"
+  given-names: "Koffi Samson"
   affiliation: "ENSAE Dakar"
 title: "Application Shiny - Subdivisions Burkina Faso 2025"
 version: 1.0.0
