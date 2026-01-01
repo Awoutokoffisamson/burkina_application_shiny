@@ -1,0 +1,15 @@
+# Fichiers temporaires R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Fichiers de déploiement
+rsconnect/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Scripts de debug
+debug_*.R
+verification_*.R

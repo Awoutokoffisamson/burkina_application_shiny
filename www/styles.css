@@ -1,0 +1,436 @@
+/* =============================================================================
+   STYLES.CSS - Application Shiny Burkina Faso
+   Design Professionnel - Bleu Foncé & Orange
+   ============================================================================= */
+
+/* ===== VARIABLES CSS ===== */
+:root {
+  --primary-blue: #1e3a5f;
+  --primary-blue-light: #2d5a87;
+  --primary-blue-dark: #152a45;
+  --accent-orange: #c65d07;
+  --accent-orange-light: #e07020;
+  --accent-orange-dark: #a04d05;
+  --bg-light: #f8fafc;
+  --bg-white: #ffffff;
+  --text-dark: #1a202c;
+  --text-medium: #4a5568;
+  --text-light: #718096;
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== BASE ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+.header-container {
+  background: var(--primary-blue);
+  color: white;
+  padding: 25px 40px;
+  margin-bottom: 0;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.header-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--accent-orange);
+}
+
+.header-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.header-subtitle {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin: 8px 0 0 0;
+  font-weight: 400;
+}
+
+/* ===== SOUS-HEADER ORANGE ===== */
+.sub-header {
+  background: var(--accent-orange);
+  color: white;
+  padding: 12px 40px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sub-header-text {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* ===== SIDEBAR ===== */
+.well {
+  background: var(--bg-white) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: var(--shadow-md) !important;
+  padding: 20px !important;
+  border-top: 4px solid var(--primary-blue) !important;
+}
+
+.well h4 {
+  color: var(--primary-blue);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--accent-orange);
+}
+
+.well .form-control {
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 10px 12px;
+  transition: border-color 0.2s ease;
+}
+
+.well .form-control:focus {
+  border-color: var(--accent-orange);
+  box-shadow: 0 0 0 3px rgba(198, 93, 7, 0.15);
+}
+
+/* ===== CARTES STATISTIQUES ===== */
+.stat-card {
+  background: var(--bg-white);
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--accent-orange);
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.stat-card:nth-child(odd)::before {
+  background: var(--primary-blue);
+}
+
+.stat-value {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--primary-blue);
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.stat-card:nth-child(even) .stat-value {
+  color: var(--accent-orange);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* ===== CARTE - CONTENEUR ===== */
+.map-container {
+  background: var(--bg-white);
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 20px;
+  overflow: hidden;
+  border: 2px solid var(--primary-blue);
+}
+
+.map-container .leaflet-container {
+  border-radius: 0;
+}
+
+/* ===== TABLEAUX ===== */
+.dataTables_wrapper {
+  padding: 20px;
+  background: var(--bg-white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+}
+
+table.dataTable thead th {
+  background: var(--primary-blue) !important;
+  color: white !important;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  border-bottom: none !important;
+  padding: 14px 16px !important;
+}
+
+table.dataTable tbody tr:nth-child(even) {
+  background-color: rgba(30, 58, 95, 0.03);
+}
+
+table.dataTable tbody tr:hover {
+  background-color: rgba(198, 93, 7, 0.08) !important;
+}
+
+table.dataTable tbody td {
+  padding: 12px 16px !important;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.9rem;
+}
+
+.dataTables_filter input {
+  border: 2px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+}
+
+.dataTables_filter input:focus {
+  border-color: var(--accent-orange) !important;
+  outline: none;
+}
+
+.dataTables_paginate .paginate_button.current {
+  background: var(--accent-orange) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 6px !important;
+}
+
+.dataTables_paginate .paginate_button:hover {
+  background: var(--primary-blue) !important;
+  color: white !important;
+  border: none !important;
+}
+
+/* ===== ONGLETS ===== */
+.nav-tabs {
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.nav-tabs>li>a {
+  color: var(--text-medium);
+  border: none;
+  border-radius: 8px 8px 0 0;
+  padding: 12px 20px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.nav-tabs>li>a:hover {
+  background-color: rgba(30, 58, 95, 0.05);
+  color: var(--primary-blue);
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
+  background-color: var(--accent-orange) !important;
+  color: white !important;
+  border: none !important;
+  border-bottom: 3px solid var(--accent-orange-dark) !important;
+}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: var(--bg-white);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--accent-orange);
+}
+
+.breadcrumb-item {
+  color: var(--primary-blue);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.breadcrumb-item:hover {
+  color: var(--accent-orange);
+  text-decoration: underline;
+}
+
+.breadcrumb-separator {
+  color: var(--text-light);
+}
+
+.breadcrumb-current {
+  color: var(--accent-orange);
+  font-weight: 700;
+}
+
+/* ===== SECTION AUTEUR ===== */
+.author-section {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.author-section h5 {
+  margin: 0 0 5px 0;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.author-section p {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* ===== FOOTER ===== */
+.footer-container {
+  background: var(--primary-blue);
+  color: white;
+  text-align: center;
+  padding: 25px 40px;
+  margin-top: 40px;
+}
+
+.footer-author {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--accent-orange);
+}
+
+.footer-credits {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* ===== STATISTIQUES NATIONALES - TABLEAU ===== */
+.stats-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.stats-table tr:nth-child(odd) {
+  background: rgba(30, 58, 95, 0.05);
+}
+
+.stats-table tr:nth-child(even) {
+  background: rgba(198, 93, 7, 0.05);
+}
+
+.stats-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.stats-table td:first-child {
+  font-weight: 600;
+  color: var(--primary-blue);
+}
+
+.stats-table td:last-child {
+  text-align: right;
+  font-weight: 700;
+  color: var(--accent-orange);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .header-container {
+    padding: 20px;
+  }
+
+  .header-title {
+    font-size: 1.4rem;
+  }
+
+  .stat-value {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .stat-card {
+    margin-bottom: 15px;
+  }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+/* ===== LÉGENDE CARTE ===== */
+.info.legend {
+  background: var(--bg-white);
+  padding: 12px 15px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  border-top: 3px solid var(--accent-orange);
+}
+
+.info.legend .legend-title {
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 8px;
+}
