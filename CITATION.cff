@@ -3,7 +3,7 @@ message: "Si vous utilisez cette application, veuillez la citer comme suit."
 authors:
 - family-names: "AWOUTO"
   given-names: "Koffi Samson"
-  affiliation: "ENSAE Dakar"
+  affiliation: "ENSAE de Dakar"
 title: "Application Shiny - Subdivisions Burkina Faso 2025"
 version: 1.0.0
 date-released: 2026-01-01
